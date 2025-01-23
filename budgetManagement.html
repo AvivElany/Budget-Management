@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מעקב הוצאות אישיות</title>
+    <link rel="stylesheet" href="./budgetManagement.css">
+</head>
+<body>
+    <div class="container">
+        <h1>מעקב הוצאות אישיות</h1>
+
+        <!-- טופס הכנסת משכורת -->
+        <div class="form-section">
+            <h2>הכנסת משכורת</h2>
+            <form id="income-form">
+                <input type="number" id="income" placeholder="סכום משכורת" required>
+                <button type="submit">הוסף</button>
+            </form>
+        </div>
+
+        <!-- טופס הוספת הוצאות -->
+        <div class="form-section">
+            <h2>הוספת הוצאה</h2>
+            <form id="expense-form">
+                <input type="text" id="expense-name" placeholder="תיאור הוצאה" required>
+                <input type="number" id="expense-amount" placeholder="סכום" required>
+                <button type="submit">הוסף</button>
+            </form>
+        </div>
+
+        <!-- תצוגת יתרות -->
+        <div class="summary">
+            <h2>סיכום</h2>
+            <p>סה"כ הכנסות: <span id="total-income">0</span> ₪</p>
+            <p>סה"כ הוצאות: <span id="total-expenses">0</span> ₪</p>
+            <p>יתרה חודשית: <span id="balance">0</span> ₪</p>
+        </div>
+
+        <!-- רשימת ההוצאות -->
+        <div class="list-section">
+            <h2>רשימת הוצאות</h2>
+            <ul id="expense-list"></ul>
+        </div>
+    </div>
+
+    <script src="./budgetManagement.js"></script>
+</body>
+</html>
